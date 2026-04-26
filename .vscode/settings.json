@@ -1,0 +1,11 @@
+{
+  "zopeneditor.zowe.maximumParallelFileUploads": 1,
+  "zopeneditor.userbuild.userSettings": {
+    "dbbHlq": "PEI.VSCODE.USERBLD",
+    "dbbWorkspace": "/z/z88589/userbuild",
+    "dbbLogDir": "/z/z88589/vscode.logs",
+    "dbbDefaultZappProfile": "dbb-build",
+    "localLogDir": "/Users/peiwang/poc/mainframe/userbuild",
+    "additionalDependencies": "samples/MortgageApplication/application-conf"
+  }
+}

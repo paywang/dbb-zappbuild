@@ -63,7 +63,7 @@
        COPY EPSNBRPM.
 
        LINKAGE SECTION.
-
+us
        01 DFHCOMMAREA.
        COPY EPSMTCOM.
 

@@ -1,0 +1,28 @@
+author: IBM Z Open Editor
+
+propertyGroups:
+  - name: search-all
+    libraries:
+      - name: syslib
+        type: local
+        locations:
+          - "**"
+
+profiles:
+  - name: dbb-build
+    type: dbb
+    settings:
+      application: MortgageApplication
+      command: "/usr/lpp/IBM/dbb/bin/groovyz"
+      buildScriptPath: "/z/z88589/poc/dbb-zappbuild/build.groovy"
+      buildScriptArgs:
+        - "--userBuild"
+        - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}"
+        - "--application ${application}/samples/MortgageApplication"
+        - "--hlq ${zopeneditor.userbuild.userSettings.dbbHlq}"
+        - "--outDir ${zopeneditor.userbuild.userSettings.dbbLogDir}"
+        - "--verbose"
+        - "--dependencyFile ${dependencyFile}"
+      logFilePatterns:
+        - "${buildFile.basename}.log"
+        - "BuildReport.*"
