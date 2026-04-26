@@ -8,7 +8,7 @@ Record working settings, commands, paths, and build output here.
 {
   "zopeneditor.zowe.maximumParallelFileUploads": 1,
   "zopeneditor.userbuild.userSettings": {
-    "dbbHlq": "PEI.VSCODE.USERBLD",
+    "dbbHlq": "Z88589",
     "dbbWorkspace": "/z/z88589/userbuild",
     "dbbLogDir": "/z/z88589/vscode.logs",
     "dbbDefaultZappProfile": "dbb-build",
@@ -42,4 +42,3 @@ profiles:
 ```text
 /z/z88589/userbuild/MortgageApplication/samples/MortgageApplication/
 ```
-
