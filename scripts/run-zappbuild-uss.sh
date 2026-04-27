@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [[ -f "$HOME/.profile" ]]; then
+  . "$HOME/.profile"
+fi
+
 usage() {
   cat <<'EOF'
 Usage:
