@@ -23,7 +23,7 @@ Modes:
 
 Common environment overrides:
   DBB_HOME                  Required. DBB installation directory.
-  ZAPPBUILD_DIR             zAppBuild directory. Default: current directory.
+  ZAPPBUILD_DIR             zAppBuild directory. Default: /z/z88589/poc/dbb-zappbuild
   WORKSPACE                 Workspace root on USS. Default: /z/z88589/userbuild
   APPLICATION               Application path relative to WORKSPACE.
                             Default: MortgageApplication/samples/MortgageApplication
@@ -55,7 +55,7 @@ shift || true
 
 : "${DBB_HOME:?DBB_HOME must be set, for example: export DBB_HOME=/usr/lpp/dbb/v2r0}"
 
-zappbuild_dir="${ZAPPBUILD_DIR:-$(pwd)}"
+zappbuild_dir="${ZAPPBUILD_DIR:-/z/z88589/poc/dbb-zappbuild}"
 workspace="${WORKSPACE:-/z/z88589/userbuild}"
 application="${APPLICATION:-MortgageApplication/samples/MortgageApplication}"
 out_dir="${OUT_DIR:-/z/z88589/vscode.logs}"
