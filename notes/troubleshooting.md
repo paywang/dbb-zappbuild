@@ -45,3 +45,30 @@ Fix:
 - Populate required site datasets in `build-conf/datasets.properties`.
 - Common required COBOL values include `SDFHCOB`, `SDFHLOAD`, `SDSNLOAD`, `SCEELKED`, and `SIGYCOMP_V6`.
 
+## Unable to Resolve RepositoryClient
+
+Symptom:
+
+```text
+/Z/z88589/poc/dbb-zappbuild/build.groovy: 23: unable to resolve class RepositoryClient
+ @ line 23, column 25.
+ @Field RepositoryClient repositoryClient
+```
+
+Fix:
+
+- This happens when using an older zAppBuild version.
+- Check out the `main` branch, not a `2.xxx` branch.
+
+## Missing Required Build Property buildOrder
+
+Symptom:
+
+```text
+Missing required build property 'buildOrder'
+```
+
+Fix:
+
+- Add `additionalDependencies` in `zapp.yaml` so User Build uploads the application properties under `application-conf`.
+- Run **Run IBM User Build with full upload** after changing `additionalDependencies`.
