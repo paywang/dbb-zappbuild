@@ -103,6 +103,18 @@ fi
 
 case "$mode" in
   user)
+    if [[ "$build_file" = /* ]]; then
+      build_file_check="$build_file"
+    else
+      build_file_check="${workspace}/${build_file}"
+    fi
+    if [[ ! -f "$build_file_check" ]]; then
+      echo "ERROR: build file not found: $build_file_check" >&2
+      echo "The build file must be relative to WORKSPACE or an absolute USS path." >&2
+      echo "Current WORKSPACE is: $workspace" >&2
+      echo "Current APPLICATION is: $application" >&2
+      exit 1
+    fi
     build_args=(--userBuild "$build_file")
     ;;
   full)
